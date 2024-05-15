@@ -3,9 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynastron.Software.Server", "Dynastron.Software.Server\Dynastron.Software.Server.csproj", "{CAD84DBD-DFF1-4591-83AE-992A14B1E541}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Client", "Client\", "{357F795C-ACEA-4333-93BA-9B83D56102CF}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_3032"
+		Debug.AspNetCompiler.PhysicalPath = "Client\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3032\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_3032"
+		Release.AspNetCompiler.PhysicalPath = "Client\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3032\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3032"
+	EndProjectSection
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "dynastron.software.client", "dynastron.software.client\dynastron.software.client.esproj", "{DD35D644-DD54-4C0E-A253-CB60BA6BC115}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "ApiServer\Server.csproj", "{F67EC478-2B5C-4C12-B8C8-4FECAB4C210B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,16 +31,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CAD84DBD-DFF1-4591-83AE-992A14B1E541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CAD84DBD-DFF1-4591-83AE-992A14B1E541}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CAD84DBD-DFF1-4591-83AE-992A14B1E541}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CAD84DBD-DFF1-4591-83AE-992A14B1E541}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD35D644-DD54-4C0E-A253-CB60BA6BC115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD35D644-DD54-4C0E-A253-CB60BA6BC115}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD35D644-DD54-4C0E-A253-CB60BA6BC115}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{DD35D644-DD54-4C0E-A253-CB60BA6BC115}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD35D644-DD54-4C0E-A253-CB60BA6BC115}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD35D644-DD54-4C0E-A253-CB60BA6BC115}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{357F795C-ACEA-4333-93BA-9B83D56102CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357F795C-ACEA-4333-93BA-9B83D56102CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357F795C-ACEA-4333-93BA-9B83D56102CF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{357F795C-ACEA-4333-93BA-9B83D56102CF}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F67EC478-2B5C-4C12-B8C8-4FECAB4C210B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F67EC478-2B5C-4C12-B8C8-4FECAB4C210B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F67EC478-2B5C-4C12-B8C8-4FECAB4C210B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F67EC478-2B5C-4C12-B8C8-4FECAB4C210B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

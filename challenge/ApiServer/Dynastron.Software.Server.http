@@ -1,4 +1,4 @@
-@Dynastron.Software.Server_HostAddress = http://localhost:5001
+@Dynastron.Software.Server_HostAddress = http://localhost:5124
 
 GET {{Dynastron.Software.Server_HostAddress}}/weatherforecast/
 Accept: application/json
