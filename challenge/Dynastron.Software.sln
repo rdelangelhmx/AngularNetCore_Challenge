@@ -21,6 +21,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Client", "Client\", "{357F7
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "3032"
+		SlnRelativePath = "Client\"
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "ApiServer\Server.csproj", "{F67EC478-2B5C-4C12-B8C8-4FECAB4C210B}"
