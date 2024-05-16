@@ -69,6 +69,7 @@ builder.Services.AddHostedService<SeedData>();
 
 var app = builder.Build();
 
+app.UseCors(opt => opt.AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader());
 app.UseSwagger();
 app.UseSwaggerUI(options =>
 {

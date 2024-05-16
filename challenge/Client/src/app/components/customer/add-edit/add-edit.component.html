@@ -1,1 +1,26 @@
-<p>add-edit works!</p>
+<div class="d-flex flex-row bd-highlight mb-9">
+  <form class="p-2 w-100 bd-highlight" [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+
+    <div class="input-group mb-2">
+      <span class="input-group-text">Id</span>
+      <input type="text" class="form-control" [readOnly]="true" formControlName="customerId">
+    </div>
+
+    <div class="input-group mb-2">
+      <span class="input-group-text">First Name</span>
+      <input type="text" class="form-control" formControlName="firstName">
+    </div>
+    <div class="input-group mb-2">
+      <span class="input-group-text">Last Name</span>
+      <input type="text" class="form-control" formControlName="lastName">
+    </div>
+    <div class="input-group mb-2">
+      <span class="input-group-text">Email</span>
+      <input type="text" class="form-control" formControlName="email">
+    </div>
+
+    <div class="input-group mb-2">
+      <button type="submit" class="btn btn-success">{{btnTitle}}</button>
+    </div>
+  </form>
+</div>
