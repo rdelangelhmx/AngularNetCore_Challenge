@@ -24,7 +24,7 @@ public class SeedData : IHostedService
             if (context.TblCustomers.Any())
                 return;
 
-            for (var i = 0; i < 20; i++)
+            for (var i = 0; i < 05; i++)
             {
                 var fName = $"{(new string[] { "Fake", "Dummy", "Random" })[new Random().Next(3)]}";
                 var lName = $"{(new string[] { "Name", "Nikname", "Alias" })[new Random().Next(3)]}";

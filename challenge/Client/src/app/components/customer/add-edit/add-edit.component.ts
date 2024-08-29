@@ -43,6 +43,7 @@ export class AddEditComponent implements OnInit {
         if (res) {
           alert('The Customer has been added');
           this.closeModalEvent.emit();
+          let modal =document.getElementById('exampleModal');
         } else alert('Can not add Customer');
       });
     } else {

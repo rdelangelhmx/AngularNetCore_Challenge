@@ -41,7 +41,7 @@ export class ApiService {
 
   deleteCustomer(Id: number): Observable<number> {
     return this.http.delete<number>(
-      environment.apiUrl + 'Customers/Delete/Id=' + Id,
+      environment.apiUrl + 'Customers/DeleteById/' + Id,
       this.httpOptions
     );
   }

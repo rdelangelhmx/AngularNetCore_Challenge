@@ -9,11 +9,11 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">{{ModalTitle}}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-          (closeModalEvent)="closeClick()" (click)="closeClick()"></button>
+        <button type="button" #closeModalBtn class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+           (click)="closeClick()"></button>
       </div>
       <div class="modal-body">
-        <cust-add-edit [customer]="customer" *ngIf="ActivateAddEdit"></cust-add-edit>
+        <cust-add-edit *ngIf="ActivateAddEdit" [customer]="customer" (closeModalEvent)="closeClick()"></cust-add-edit>
       </div>
     </div>
   </div>

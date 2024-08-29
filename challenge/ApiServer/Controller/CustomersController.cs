@@ -28,7 +28,7 @@ public class CustomersController : ControllerBase
         }
     }
 
-    [HttpGet("[action]")]
+    [HttpGet("[action]/{id}")]
     public async Task<IActionResult> GetById(int id)
     {
         try
@@ -67,7 +67,7 @@ public class CustomersController : ControllerBase
         }
     }
 
-    [HttpGet("[action]")]
+    [HttpDelete("[action]/{id}")]
     public async Task<IActionResult> DeleteById(int id)
     {
         try

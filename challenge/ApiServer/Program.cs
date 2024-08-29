@@ -65,6 +65,7 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddAuthentication(appConfig.Application.Scheme)
     .AddScheme<BasicAuthenticationOptions, CustomAuthenticationHandler>(appConfig.Application.Scheme, null);
 
+// Add dommy data
 builder.Services.AddHostedService<SeedData>();
 
 var app = builder.Build();

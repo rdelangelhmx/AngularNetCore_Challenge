@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+
 
 @Component({
   selector: 'app-show',
@@ -7,6 +8,7 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./show.component.css'],
 })
 export class ShowComponent implements OnInit {
+  @ViewChild('closeModalBtn') closeModalBtn!: ElementRef;
   CustomerList: any = [];
   ModalTitle = '';
   ActivateAddEdit: boolean = false;
@@ -37,15 +39,19 @@ export class ShowComponent implements OnInit {
 
   deleteClick(item: any) {
     if (confirm('Are you sure??')) {
-      this.service.deleteCustomer(item.CustomerId).subscribe((data) => {
-        alert(data.toString());
-        this.refreshList();
+      this.service.deleteCustomer(item.customerId).subscribe((res) => {
+        console.log(res);
+        if(res)
+          this.refreshList();
+        else
+          alert("Can't delete record");
       });
     }
   }
 
   closeClick() {
     this.ActivateAddEdit = false;
+    this.closeModalBtn.nativeElement.click();
     this.refreshList();
   }
 

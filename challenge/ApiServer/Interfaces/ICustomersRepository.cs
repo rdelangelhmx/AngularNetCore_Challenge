@@ -7,5 +7,5 @@ public interface ICustomersRepository
     public IEnumerable<TblCustomers> GetAll();
     public TblCustomers GetById(int id);
     public bool Put(TblCustomers tblCustomers, int? id);
-    public TblCustomers DeleteById(int id);
+    public bool DeleteById(int? id);
 }

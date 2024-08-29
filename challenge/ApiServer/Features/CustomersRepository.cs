@@ -35,11 +35,18 @@ public class CustomersRepository : ICustomersRepository
         }
     }
 
-    public TblCustomers DeleteById(int id)
+    public bool DeleteById(int? id)
     {
         try
         {
-            return context.TblCustomers.FirstOrDefault(w => w.CustomerId == id);
+            if (id.HasValue)
+            {
+                var customer = context.TblCustomers.FirstOrDefault(w => w.CustomerId == id);
+                context.TblCustomers.Remove(customer);
+                context.SaveChanges();
+                return true;
+            }
+            return false;
         }
         catch (Exception ex)
         {
